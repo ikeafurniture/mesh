@@ -1,0 +1,84 @@
+body {
+	background-color: #121212;
+}
+
+#logo {
+	height: 29px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	z-index: 1;
+}
+
+#graph{
+	position: fixed;
+	display: inline;
+	width: 40%;
+	height: 100%;
+	background-color: white;
+}
+
+#graph #avatar {
+	height: 40px;
+}
+
+
+.fileList{
+	position: absolute;
+	left: 40%;
+	width: 60%;
+	background-color: #121212;
+}
+
+.post #avatar {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+  /*margin: 50px auto;*/
+	/*margin-left: -60px;*/
+	border-radius: 5px 5px 5px 5px;
+
+}
+
+.post {
+	width: 560px;
+	display: block;
+  margin: 30px auto;
+}
+
+.post .content {
+	margin-left: 60px;
+}
+
+.post .content img {
+	width: 500px;
+}
+
+.post .header {
+	width: 100%;
+	height: 40px;
+	background-color: #fafafa;
+	border-radius: 5px 5px 0px 0px;
+	color: #e6e6e6;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.post .footer {
+	width: 100%;
+	height: 40px;
+	background-color: #fafafa;
+	border-radius: 0px 0px 5px 5px;
+}
+
+.post span {
+	color: #1a1a1a;
+	display:inline-block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	vertical-align: middle;
+	width: 500px;
+}

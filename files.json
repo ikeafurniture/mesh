@@ -1,0 +1,26 @@
+[ { "IsDir" : false,
+    "Name" : "Boba",
+    "Type" : "img/jpeg",
+    "ID"   : "bf2a4600a9294378a414d949aa5c3f3f.jpg",
+    "Time" : "2015-07-20T17:38:30+08:00",
+    "Size" : 6962476
+  },
+  { "IsDir" : false,
+    "Time" : "2015-07-20T17:38:30+08:00",
+    "Mode" : 420,
+    "Name" : "server.go",
+    "Size" : 1761
+  },
+  { "IsDir" : true,
+    "ModTime" : "2015-07-20T17:40:43+08:00",
+    "Mode" : 2147484141,
+    "Name" : "static",
+    "Size" : 136
+  },
+  { "IsDir" : true,
+    "ModTime" : "2015-07-20T17:40:43+08:00",
+    "Mode" : 2147484141,
+    "Name" : "static",
+    "Size" : 136
+  }
+]
