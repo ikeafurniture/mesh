@@ -10,9 +10,10 @@ var App = React.createClass({
   render: function render() {
     return (
       React.createElement("div", null,
-        React.createElement("img", {id: "logo", src: "/static/img/logo.png"}),
         React.createElement("div", {id: "graph"}),
-        React.createElement(FileList, null)
+        React.createElement("img", {id: "logo", src: "/static/img/logo.png"}),
+        React.createElement(FileList, null),
+        React.createElement(GraphMenu, null)
       )
     );
   }
@@ -46,8 +47,23 @@ var FileList = React.createClass({displayName: "FileList",
     });
 
     return (
-      React.createElement("div", {className: "fileList"}, files)
+      React.createElement("div", {className: "fileList"},
+        React.createElement(NewPost),
+        files)
     );
+  }
+})
+
+var NewPost = React.createClass({
+  displayName: "NewPost",
+  render: function() {
+    return(
+    React.createElement("div", {className: "post"},
+      React.createElement("img", {id: "avatar", src: '/post/avatar.jpg'}),
+      React.createElement("label", {for: "inputlg"}),
+      React.createElement("textarea", {class: "form-control", type: "text"})
+    )
+  )
   }
 })
 
@@ -58,17 +74,7 @@ var PhotoPost = React.createClass({displayName: "PhotoPost",
     return (
 
       React.createElement("div", {className: "post"},
-
-        // React.createElement("div", {className: "avatar"},
-          // React.createElement("SVGComponent", {id: "avatar", height: "33", width: "33"},
-          //   React.createElement(Rectangle, {
-          //   height: "33", width: "33", x: "0", y: "0",
-          //   fill: "white"})
-          // ),
-        // ),
-
         React.createElement("img", {id: "avatar", src: '/post/avatar.jpg'}),
-
         React.createElement("div", {className: "content"},
           React.createElement("div", {className: "header"},
             React.createElement("span", null, this.props.author)
@@ -79,6 +85,29 @@ var PhotoPost = React.createClass({displayName: "PhotoPost",
           )
         )
       )
+    )
+  }
+
+})
+
+
+var GraphMenu = React.createClass({
+  displayName: "GraphMenu",
+  render: function() {
+    return (
+
+
+      React.createElement("div", {id: "GraphMenu"},
+        React.createElement("div", {className: "btn-group", role: "group", ariaLabel: "..."},
+          React.createElement("button", {className: "btn btn-default dropdown-toggle"},
+            React.createElement("img", {id: "avatar", src: '/post/avatar.jpg'}),
+            "oliver54321"),
+          React.createElement("button", {className: "btn btn-default pull-right"}, "+")
+        )
+      )
+        // React.createElement("a", {href: "#"}, "oliver54321",
+        //   React.createElement("b", {class: "caret dropdown-toggle"})
+        // )
     )
   }
 

@@ -1,3 +1,10 @@
+/*
+
+* Sign everything with public key?
+	* Can do cool stuff like a distributed chat room -- each message signed, everyone keeps a copy of the history?
+		* Consensus?
+*/
+
 package main
 
 import (
@@ -102,7 +109,7 @@ func post(c *gin.Context) {
 
 	// c.Data(http.StatusOK, contentType, data)
 	// http.ServeFile(w, r, r.URL.Path[6:])
-	c.File(id)
+	c.File("files/" + id)
 }
 
 // Local endpoints
@@ -173,5 +180,5 @@ func main() {
 
 	r.Static("/static", "./static")
 
-	r.Run(":8080") // listen and serve on 0.0.0.0:8080
+	r.Run(":9090") // listen and serve on 0.0.0.0:8080
 }
